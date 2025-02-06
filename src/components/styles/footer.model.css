@@ -1,0 +1,19 @@
+/* Footer.css */
+
+/* Define shadow root */
+.shadow-root {
+    display: block;
+    background-color: white;
+    /* Add other styles as needed */
+}
+
+/* Styles for specific elements */
+.shadow-root a {
+    color: var(--link-color, #3182ce);
+}
+
+.shadow-root .dark:bg-gray-900 {
+    /* Dark mode background */
+}
+
+/* Add more styles for different elements as per the original CSS */

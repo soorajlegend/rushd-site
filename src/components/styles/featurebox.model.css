@@ -1,0 +1,30 @@
+.threed-circle-icon{
+    background: linear-gradient(187deg,rgba(255,255,255,1) 0%,rgba(245,245,244,1) 100%);
+    height: 4.1rem;
+    width: 4.1rem;
+    border: 1px solid #97979717;
+}
+.dark .threed-circle-icon{
+    border: 1px solid #ffffff18;
+}
+.dark .threed-circle-icon{
+    background: linear-gradient(187deg, rgba(41,37,36,1) 0%, rgba(23,21,19,1) 100%);
+}
+.threed-circle-icon::after {
+    content: '';
+    width: 6rem;
+    position: absolute;
+    height: 6rem;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0% , rgba(249, 249, 249, 0.666) 40%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.8;
+}
+.dark .threed-circle-icon::after {
+    background: linear-gradient(180deg, rgb(41, 37, 36) 0%, rgb(25, 23, 21) 40%);
+    opacity: 0.4;
+}
+.threed-circle-icon .icon{
+    width: 2rem !important;
+    height: 2rem !important;
+}
