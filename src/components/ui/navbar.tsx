@@ -13,8 +13,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { LayoutDashboard, User } from "lucide-react";
-
 import { Logo } from "@/components/ui/logo";
 import { Link } from "react-router-dom";
 
