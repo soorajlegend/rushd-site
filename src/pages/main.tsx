@@ -11,7 +11,9 @@ import { Customers_info_form } from "@/components/ui/customers-info-form";
 import { BackgroundLines } from "@/components/ui/bg-lines";
 import { HoverBorderGradient } from "@/components/ui/hover-btn";
 import { SparklesCore } from "@/components/ui/spackles";
-
+import { Quote } from "@/components/ui/quotes";
+import  PricingSection  from "@/components/ui/price";
+import Features  from "@/components/ui/features";
 export default function Main() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:px-24 sm:px-6 px-6 py-4">
@@ -212,6 +214,25 @@ export default function Main() {
             notList
           />
         </div>
+      </section>
+      <section>
+      <Features></Features>
+      </section>
+      <section>
+        <PricingSection></PricingSection>
+      </section>
+      <section>
+        <Quote
+          text="You can't manage what you can't measure."
+        />
+        <Quote
+          text="Systems give us the freedom to focus on what truly matters."
+        />
+        <Quote
+          text="The intelligent approach to systems is to make them as simple as possible."
+          author="Albert Einstein"
+          role="Theoretical Physicist"
+        />
       </section>
 
       <div className="flexbox w-full h-[100vh] my-auto devicemockup">
