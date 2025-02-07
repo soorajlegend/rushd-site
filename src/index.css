@@ -121,33 +121,57 @@ body {
   scroll-behavior: smooth !important;
 }
 
-/* body::before,
+body::before,
 body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    pointer-events: none; 
-    opacity: 0.15;
-} 
-    
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
 body::before {
-    background-image: repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(0, 0, 0, 0.1) 35px, rgba(0, 0, 0, 0.1) 36px);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 35px,
+    rgba(0, 0, 0, 0.1) 35px,
+    rgba(0, 0, 0, 0.1) 36px
+  );
 }
 
 body::after {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(0, 0, 0, 0.1) 35px, rgba(0, 0, 0, 0.1) 36px);
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 35px,
+    rgba(0, 0, 0, 0.1) 35px,
+    rgba(0, 0, 0, 0.1) 36px
+  );
 }
 
-.dark body::before{
-    background-image: repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(255, 255, 255, 0.1) 35px, rgba(255, 255, 255, 0.1) 36px);
+.dark body::before {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.1) 35px,
+    rgba(255, 255, 255, 0.1) 36px
+  );
 }
-.dark body::after{
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(255, 255, 255, 0.1) 35px, rgba(255, 255, 255, 0.1) 36px);
-} */
+.dark body::after {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.1) 35px,
+    rgba(255, 255, 255, 0.1) 36px
+  );
+}
 
 .devicemockup {
   display: flex;

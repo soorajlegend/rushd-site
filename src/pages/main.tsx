@@ -1,24 +1,26 @@
 "use client";
-import { NavigationMenuComp } from "@/components/ui/navbar";
+
 import { Footer } from "@/components/ui/footer";
 import { FeatureBox } from "@/components/ui/featurebox";
 
 import "@/components/icons/boxicons.min.css";
 
 import { Bug } from "lucide-react";
-import{CircleCheckBig} from "lucide-react"
+import { CircleCheckBig } from "lucide-react";
 import { Customers_info_form } from "@/components/ui/customers-info-form";
 import { BackgroundLines } from "@/components/ui/bg-lines";
 import { HoverBorderGradient } from "@/components/ui/hover-btn";
 import { SparklesCore } from "@/components/ui/spackles";
 import { Quote } from "@/components/ui/quotes";
-import  PricingSection  from "@/components/ui/price";
-import Features  from "@/components/ui/features";
+import PricingSection from "@/components/ui/price";
+import Features from "@/components/ui/features";
 import Marketing from "@/components/ui/marketing";
+import { NavbarMenu } from "@/components/ui/navigation-menu";
+
 export default function Main() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:px-24 sm:px-6 px-6 py-4">
-      <NavigationMenuComp></NavigationMenuComp>
+      <NavbarMenu />
 
       <section>
         <BackgroundLines>
@@ -217,7 +219,7 @@ export default function Main() {
         </div>
       </section>
       <section>
-      <Features></Features>
+        <Features></Features>
       </section>
       <section>
         <Marketing></Marketing>
@@ -226,12 +228,8 @@ export default function Main() {
         <PricingSection></PricingSection>
       </section>
       <section>
-        <Quote
-          text="You can't manage what you can't measure."
-        />
-        <Quote
-          text="Systems give us the freedom to focus on what truly matters."
-        />
+        <Quote text="You can't manage what you can't measure." />
+        <Quote text="Systems give us the freedom to focus on what truly matters." />
         <Quote
           text="The intelligent approach to systems is to make them as simple as possible."
           author="Albert Einstein"
