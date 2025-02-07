@@ -74,7 +74,7 @@ interface PricingTier {
                 </p>
               </div>
   
-              <button className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500">
+              <button className="w-full rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500">
                 Get Started
               </button>
   

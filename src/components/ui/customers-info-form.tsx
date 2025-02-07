@@ -87,9 +87,9 @@ export function Customers_info_form() {
                     name="city"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>City</FormLabel>
+                            <FormLabel>Message</FormLabel>
                             <FormControl>
-                                <Input placeholder="e.g. Ryiadh" {...field} />
+                                <Input placeholder="" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
