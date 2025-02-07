@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -34,6 +35,9 @@ const formSchema = z.object({
 });
 
 export function Customers_info_form() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -45,10 +49,36 @@ export function Customers_info_form() {
         },
     });
     
-    // Define a submit handler. (What to do on submit)
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        // Add your submission logic here, such as sending the form data to a backend server
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+        
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwOB1ZNRaabsXh0QnkLyd0p1iIYBM5ui6MpI2WOGcjRQh1Ors-yhm5oUcCPVwVRQ-lU/exec';
+        
+        try {
+            // Create a FormData object
+            const formData = new FormData();
+            Object.keys(values).forEach(key => {
+                formData.append(key, values[key as keyof typeof values]);
+            });
+
+            // Send as no-cors request
+            await fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            });
+
+            // Since we can't read the response with no-cors,
+            // we'll assume success if no error was thrown
+            setSubmitStatus('success');
+            form.reset();
+        } catch (error) {
+            console.error('Submission error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -87,9 +117,9 @@ export function Customers_info_form() {
                     name="city"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>City</FormLabel>
+                            <FormLabel>Message</FormLabel>
                             <FormControl>
-                                <Input placeholder="e.g. Ryiadh" {...field} />
+                                <Input placeholder="" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -123,7 +153,39 @@ export function Customers_info_form() {
                         )}
                     />
                 </div>
-                <Button type="submit"><i className='bx bxs-rocket pr-2'></i> Submit</Button>
+                <div className="space-y-2">
+                    <Button 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className="w-full"
+                    >
+                        {isSubmitting ? (
+                            <span className="flex items-center">
+                                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Submitting...
+                            </span>
+                        ) : (
+                            <span className="flex items-center">
+                                <i className='bx bxs-rocket pr-2'></i>
+                                Submit
+                            </span>
+                        )}
+                    </Button>
+                    
+                    {submitStatus === 'success' && (
+                        <p className="text-green-600 text-sm text-center">
+                            Form submitted successfully!
+                        </p>
+                    )}
+                    {submitStatus === 'error' && (
+                        <p className="text-red-600 text-sm text-center">
+                            An error occurred. Please try again.
+                        </p>
+                    )}
+                </div>
             </form>
         </Form>
     );

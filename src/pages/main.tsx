@@ -6,12 +6,15 @@ import { FeatureBox } from "@/components/ui/featurebox";
 import "@/components/icons/boxicons.min.css";
 
 import { Bug } from "lucide-react";
-
+import{CircleCheckBig} from "lucide-react"
 import { Customers_info_form } from "@/components/ui/customers-info-form";
 import { BackgroundLines } from "@/components/ui/bg-lines";
 import { HoverBorderGradient } from "@/components/ui/hover-btn";
 import { SparklesCore } from "@/components/ui/spackles";
-
+import { Quote } from "@/components/ui/quotes";
+import  PricingSection  from "@/components/ui/price";
+import Features  from "@/components/ui/features";
+import Marketing from "@/components/ui/marketing";
 export default function Main() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:px-24 sm:px-6 px-6 py-4">
@@ -176,13 +179,13 @@ export default function Main() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <FeatureBox
-            Icon={Bug}
+            Icon={CircleCheckBig}
             title="Complexity"
             description={["Multiple disconnected systems create complexity."]}
             notList
           />
           <FeatureBox
-            Icon={Bug}
+            Icon={CircleCheckBig}
             title="Tracking Issues"
             description={[
               "Difficult tracking of financial performance and occupancy.",
@@ -190,7 +193,7 @@ export default function Main() {
             notList
           />
           <FeatureBox
-            Icon={Bug}
+            Icon={CircleCheckBig}
             title="High Cost"
             description={["High operational costs due to OTA commission fees."]}
             notList
@@ -198,13 +201,13 @@ export default function Main() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <FeatureBox
-            Icon={Bug}
+            Icon={CircleCheckBig}
             title="Complexity"
             description={["Multiple disconnected systems create complexity."]}
             notList
           />
           <FeatureBox
-            Icon={Bug}
+            Icon={CircleCheckBig}
             title="Tracking Issues"
             description={[
               "Difficult tracking of financial performance and occupancy.",
@@ -212,6 +215,28 @@ export default function Main() {
             notList
           />
         </div>
+      </section>
+      <section>
+      <Features></Features>
+      </section>
+      <section>
+        <Marketing></Marketing>
+      </section>
+      <section>
+        <PricingSection></PricingSection>
+      </section>
+      <section>
+        <Quote
+          text="You can't manage what you can't measure."
+        />
+        <Quote
+          text="Systems give us the freedom to focus on what truly matters."
+        />
+        <Quote
+          text="The intelligent approach to systems is to make them as simple as possible."
+          author="Albert Einstein"
+          role="Theoretical Physicist"
+        />
       </section>
 
       <div className="flexbox w-full h-[100vh] my-auto devicemockup">
