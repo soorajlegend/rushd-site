@@ -14,7 +14,7 @@ import { Quote } from "@/components/ui/quotes";
 import PricingSection from "@/components/ui/price";
 import Features from "@/components/ui/features";
 import Marketing from "@/components/ui/marketing";
-import { NavbarMenu } from "@/components/ui/navigation-menu";
+import { NavbarMenu } from "@/components/ui/navigation";
 export default function MainArabic() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:px-24 sm:px-6 px-6 py-4">
