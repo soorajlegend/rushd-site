@@ -1,82 +1,208 @@
 interface PricingTier {
   name: string;
-  price: number;
   description: string;
   features: string[];
+  units: string;
+  users: string;
+  monthly: string;
+  yearly: string;
+  fees: string;
+  client: string;
 }
 
-const pricingTiers: PricingTier[] = [
+const tiers: PricingTier[] = [
   {
-    name: "Basic",
-    price: 99,
-    description:
-      "Best for small business owners, startups who needs landing page for their business.",
-    features: ["Feature 1", "Feature 2", "Feature 3"],
+    name: "Starter",
+    description: "Basic features, limited support",
+    features: [],
+    units: "1",
+    users: "1",
+    monthly: "FREE",
+    yearly: "FREE",
+    fees: "0",
+    client: "New users for one year only, then Direct becomes the basic package"
   },
   {
-    name: "Premium",
-    price: 199,
-    description:
-      "Best for medium business owners, startups who needs landing page for their business.",
-    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
+    name: "Basic",
+    description: "Additional features, standard support",
+    features: [
+      "• Booking",
+      "• Contract management",
+      "• Channel management",
+      "• Calendar",
+      "• CRM"
+    ],
+    units: "1-4",
+    users: "2",
+    monthly: "81",
+    yearly: "890 Discount/1M",
+    fees: "0",
+    client: "Small companies"
+  },
+  {
+    name: "Advanced",
+    description: "Advanced features, fast support",
+    features: [
+      "• Special domain",
+      "• Payment gateway"
+    ],
+    units: "8",
+    users: "unlimited",
+    monthly: "90",
+    yearly: "1000 Discount/1M",
+    fees: "5% Per booking",
+    client: "Medium companies"
   },
   {
     name: "Enterprise",
-    price: 399,
-    description:
-      "Best for large companies, business owners who needs landing page for their business.",
-    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
-  },
+    description: "Full customization as needed, systems integration, 24/7 support",
+    features: [],
+    units: "unlimited",
+    users: "unlimited",
+    monthly: "DEAL",
+    yearly: "DEAL",
+    fees: "5% Per booking",
+    client: "Large companies"
+  }
+];
+
+interface AddOn {
+  name: string;
+  cost: string;
+}
+
+const addOns: AddOn[] = [
+  { name: "Add Unit", cost: "50 per yearly" },
+  { name: "Dynamic Pricing", cost: "25 per unit per monthly" },
+  { name: "Smartlocks", cost: "15 per smartlock per monthly" },
+  { name: "Onboarding", cost: "299 One-time" },
+  { name: "Report", cost: "199 One-time" },
 ];
 
 const PricingSection = () => {
+  const plans = [
+    {
+      name: "Free",
+      price: "FREE",
+      description: "Basic features, limited support",
+      features: [
+        "Units: 1",
+        "Users: 1",
+        "Yearly: FREE",
+        "Fees: 0"
+      ]
+    },
+    {
+      name: "Basic",
+      price: "81",
+      period: "/month",
+      description: "Additional features, standard support",
+      features: [
+        "Units: 1-4",
+        "Users: 2",
+        "Yearly: 890 Discount/1M",
+        "Fees: 0",
+        "• Booking",
+        "• Contract management",
+        "• Channel management",
+        "• Calendar",
+        "• CRM"
+      ]
+    },
+    {
+      name: "Advanced",
+      price: "90",
+      period: "/month",
+      description: "Advanced features, fast support",
+      features: [
+        "Units: 8",
+        "Users: unlimited",
+        "Yearly: 1000 Discount/1M",
+        "Fees: 5% Per booking",
+        "• Special domain",
+        "• Payment gateway"
+      ]
+    },
+    {
+      name: "Enterprise",
+      price: "DEAL",
+      description: "Full customization as needed, systems integration, 24/7 support",
+      features: [
+        "Units: unlimited",
+        "Users: unlimited",
+        "Yearly: DEAL",
+        "Fees: 5% Per booking"
+      ]
+    }
+  ];
+
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-          Make the wise decision
-        </h2>
-        <p className="mt-4 text-lg text-gray-600">
-          Choose from our affordable 3 packages
-        </p>
-      </div>
+    <div className="py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900">Pricing & Plans</h2>
+          <p className="mt-4 mb-16 text-gray-600">Choose the plan that best suits your needs.</p>
+        </div>
 
-      <div className="mt-12 grid gap-8 lg:grid-cols-3">
-        {pricingTiers.map((tier) => (
-          <div
-            key={tier.name}
-            className={`relative rounded-2xl p-8 shadow-lg ${
-              tier.name === "Premium"
-                ? "bg-black text-white ring-2 ring-blue-500"
-                : "bg-white"
-            }`}
-          >
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold">{tier.name}</h3>
-              <p className="mt-4 text-5xl font-bold tracking-tight">
-                ${tier.price}
+        <div className="grid grid-cols-4 gap-x-8">
+          {plans.map((plan) => (
+            <div key={plan.name} className="relative">
+              <div className="text-blue-600 font-semibold">{plan.name}</div>
+              <div className="mt-4 flex items-baseline">
+                <span className="text-6xl font-bold tracking-tight">
+                  {plan.price}
+                </span>
+                {plan.period && (
+                  <span className="text-sm font-semibold text-gray-600 ml-1">
+                    {plan.period}
+                  </span>
+                )}
+              </div>
+              <p className="mt-2 text-sm text-gray-600">
+                {plan.description}
               </p>
-              <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-                {tier.description}
-              </p>
-            </div>
-
-            <button className="w-full rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-500">
-              Get Started
-            </button>
-
-            <div className="mt-8">
-              <h4 className="text-sm font-semibold">What's included:</h4>
-              <ul className="mt-4 space-y-4">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start">
-                    <span className="text-sm">{feature}</span>
+              <ul className="mt-8 space-y-3">
+                {plan.features.map((feature, index) => (
+                  <li key={index} className="text-sm text-gray-600">
+                    {feature}
                   </li>
                 ))}
               </ul>
             </div>
+          ))}
+        </div>
+
+        <div className="mt-24">
+          <div className="mx-auto max-w-4xl">
+            <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-8">Add-Ons</h3>
+            <div className="overflow-hidden rounded-xl border border-gray-200">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr className="bg-blue-50">
+                    <th scope="col" className="py-4 px-6 text-left text-sm font-semibold text-gray-900">
+                      Add-Ons
+                    </th>
+                    <th scope="col" className="py-4 px-6 text-left text-sm font-semibold text-gray-900">
+                      Cost
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-white">
+                  {addOns.map((addon) => (
+                    <tr key={addon.name} className="hover:bg-gray-50 transition-colors">
+                      <td className="py-4 px-6 text-sm text-gray-900">
+                        {addon.name}
+                      </td>
+                      <td className="py-4 px-6 text-sm text-gray-600">
+                        {addon.cost}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

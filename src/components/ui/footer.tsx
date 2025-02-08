@@ -8,17 +8,31 @@ export function Footer() {
       <div className="w-full mx-auto max-w-screen-xl p-4">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           {/* Left side - Contact info */}
-          <div className="text-sm flex flex-wrap gap-x-6">
+          <div className="text-sm flex flex-wrap gap-6">
             <div className="text-gray-500 dark:text-gray-400">
               <span className="font-medium">Email: </span>
-              <a href="mailto:contact@rushd.com" className="hover:underline">
-                contact@rushd.com
+              <a href="mailto:Info@rushd.tech" className="hover:underline">
+                Info@rushd.tech
               </a>
             </div>
             <div className="text-gray-500 dark:text-gray-400">
-              <span className="font-medium">Phone: </span>
-              <a href="tel:+1234567890" className="hover:underline">
-                +1 (234) 567-890
+              <span className="font-medium">Whatsapp: </span>
+              <a href="tel:+966534336584" className="hover:underline">
+                +966 53 433 6584
+              </a>
+            </div>
+            <div className="text-gray-500 dark:text-gray-400 flex gap-6">
+              <a href="https://www.linkedin.com/company/rushdtech/" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+              <a href="https://x.com/userushd?s=21" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                X
+              </a>
+              <a href="https://www.instagram.com/userushd/profilecard/?igsh=Znd6cmVya2ZnaDlh" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
+              <a href="https://www.tiktok.com/@userushd?_t=ZS-8tkKyHL6ick&_r=1" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                TikTok
               </a>
             </div>
           </div>
