@@ -1,7 +1,6 @@
 "use client";
 
 import "@/components/styles/footer.model.css";
-import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
