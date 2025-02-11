@@ -1,17 +1,5 @@
 import { cn } from "@/lib/utils";
 
-interface PricingTier {
-  name: string;
-  description: string;
-  features: string[];
-  units: string;
-  users: string;
-  monthly: string;
-  yearly: string;
-  fees: string;
-  client: string;
-}
-
 interface AddOn {
   name: string;
   cost: string;
@@ -173,7 +161,7 @@ const PricingSection = () => {
                     >
                       <svg
                         className={cn(
-                          "h-5 w-5 text-blue-500 mr-2",
+                          "h-5 w-5 text-orange-500 mr-2",
                           !plan.availableFeatures.includes(feature) &&
                             "text-gray-400"
                         )}

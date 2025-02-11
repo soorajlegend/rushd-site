@@ -22,17 +22,29 @@ export function Footer() {
               </a>
             </div>
             <div className="text-gray-500 dark:text-gray-400 flex gap-6">
-              <a href="https://www.linkedin.com/company/rushdtech/" className="hover:underline" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/company/rushdtech/"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 LinkedIn
               </a>
-              <a href="https://x.com/userushd?s=21" className="hover:underline" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://x.com/userushd?s=21"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 X
               </a>
-              <a href="https://www.instagram.com/userushd/profilecard/?igsh=Znd6cmVya2ZnaDlh" className="hover:underline" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/userushd/profilecard/?igsh=Znd6cmVya2ZnaDlh"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Instagram
-              </a>
-              <a href="https://www.tiktok.com/@userushd?_t=ZS-8tkKyHL6ick&_r=1" className="hover:underline" target="_blank" rel="noopener noreferrer">
-                TikTok
               </a>
             </div>
           </div>

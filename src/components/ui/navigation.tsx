@@ -72,7 +72,7 @@ export function NavbarMenu() {
               </li>
             </ul>
             <Button size="lg" asChild>
-              <a href="#start">Get Started</a>
+              <a href="#getStarted">Get Started</a>
             </Button>
           </div>
         </div>
@@ -127,7 +127,7 @@ export function NavbarMenu() {
           </ul>
           <div className="mt-4">
             <Button size="lg" className="w-full" asChild>
-              <a href="#start">Get Started</a>
+              <a href="#getStarted">Get Started</a>
             </Button>
           </div>
         </div>

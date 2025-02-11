@@ -34,7 +34,7 @@ export default function Main() {
               Simplifying property and serviced apartment management through an
               integrated platform
             </p>
-            <div className="mt-10">
+            <a href="#getStarted" className="mt-10">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
@@ -42,7 +42,7 @@ export default function Main() {
               >
                 Get Started
               </HoverBorderGradient>
-            </div>
+            </a>
           </div>
         </BackgroundLines>
       </section>
@@ -54,10 +54,10 @@ export default function Main() {
           </h1>
           <div className="w-[40rem] h-28 relative">
             {/* Gradients */}
-            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-red-500 to-transparent h-[2px] w-3/4 blur-sm" />
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-red-500 to-transparent h-px w-3/4" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent h-[5px] w-1/4 blur-sm" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent h-px w-1/4" />
 
             {/* Core component */}
             <SparklesCore
@@ -104,10 +104,10 @@ export default function Main() {
           </h1>
           <div className="w-[40rem] h-28 relative">
             {/* Gradients */}
-            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-red-500 to-transparent h-[2px] w-3/4 blur-sm" />
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-red-500 to-transparent h-px w-3/4" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent h-[5px] w-1/4 blur-sm" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent h-px w-1/4" />
 
             {/* Core component */}
             <SparklesCore
@@ -183,7 +183,7 @@ export default function Main() {
 
       <World />
 
-      <section className="pt-0 pb-12 mb-6 lg:w-7/12" id="tryMvp">
+      <section className="pt-0 pb-12 mb-6 lg:w-7/12" id="getStarted">
         <h1 className="font-medium text-4xl text-center mb-4 tracking-tight text-gray-900 lg:leading-none dark:text-white lg:text-center lg:mb-12">
           Get <span className="text-primary text-5xl">Rushd</span> Directly as
           soon as it is available.
