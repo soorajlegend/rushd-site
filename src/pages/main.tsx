@@ -126,37 +126,39 @@ export default function Main() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <FeatureBox
             Icon={CircleCheckBig}
-            title="Complexity"
-            description={["Multiple disconnected systems create complexity."]}
+            title="Unified Interface"
+            description={["One interface to manage all units efficiently"]}
             notList
           />
           <FeatureBox
             Icon={CircleCheckBig}
-            title="Tracking Issues"
+            title="Smart Analytics"
             description={[
-              "Difficult tracking of financial performance and occupancy.",
+              "Intelligent tracking of financial performance and occupancy",
             ]}
             notList
           />
           <FeatureBox
             Icon={CircleCheckBig}
-            title="High Cost"
-            description={["High operational costs due to OTA commission fees."]}
+            title="Automated Operations"
+            description={["Automated processes to minimize human error"]}
             notList
           />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <FeatureBox
             Icon={CircleCheckBig}
-            title="Complexity"
-            description={["Multiple disconnected systems create complexity."]}
+            title="Direct Booking Website"
+            description={[
+              "Accept bookings & payments directly, reducing OTA commission fees",
+            ]}
             notList
           />
           <FeatureBox
             Icon={CircleCheckBig}
-            title="Tracking Issues"
+            title="OTA Integration"
             description={[
-              "Difficult tracking of financial performance and occupancy.",
+              "Seamlessly manage bookings across Airbnb, Booking.com, Vrbo, and more",
             ]}
             notList
           />
